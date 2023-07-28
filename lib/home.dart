@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animations/animations/3d_stack_rotation.dart';
 import 'package:flutter_animations/animations/animatedBuilder_transform.dart';
+import 'package:flutter_animations/animations/animatedContainer.dart';
 import 'package:flutter_animations/animations/curves_clipper_animations.dart';
 import 'package:flutter_animations/animations/hero_animation.dart';
 import 'package:get/get.dart';
@@ -45,6 +46,14 @@ class HomePage extends StatelessWidget {
               );
             },
             child: Text("Hero Animation"),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Get.to(
+                AnimatedContainerExample(),
+              );
+            },
+            child: Text('Animated Container'),
           )
         ],
       ),
