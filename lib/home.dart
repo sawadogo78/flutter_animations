@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animations/animations/3d_stack_rotation.dart';
 import 'package:flutter_animations/animations/animatedBuilder_transform.dart';
 import 'package:flutter_animations/animations/curves_clipper_animations.dart';
 import 'package:get/get.dart';
@@ -27,6 +28,14 @@ class HomePage extends StatelessWidget {
               );
             },
             child: Text("Chained Animations Curves and Clipper"),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Get.to(
+                StackRotation3DEffet(),
+              );
+            },
+            child: Text("3D Stack Rotation"),
           )
         ],
       ),
