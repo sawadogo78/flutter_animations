@@ -103,6 +103,23 @@ class _ChaineCurvesClipperAnimationState
           ..forward();
       }
     });
+
+    _flipAnimation.addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        _counterClockwiseRotationAnimation = Tween<double>(
+          begin: _counterClockwiseRotationAnimation.value,
+          end: _counterClockwiseRotationAnimation.value + -(pi / 2),
+        ).animate(
+          CurvedAnimation(
+            parent: _counterClockwiseRotationController,
+            curve: Curves.bounceOut,
+          ),
+        );
+        _counterClockwiseRotationController
+          ..reset()
+          ..forward();
+      }
+    });
   }
 
   @override
