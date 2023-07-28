@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animations/animations/3d_stack_rotation.dart';
 import 'package:flutter_animations/animations/animatedBuilder_transform.dart';
 import 'package:flutter_animations/animations/curves_clipper_animations.dart';
+import 'package:flutter_animations/animations/hero_animation.dart';
 import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
@@ -36,6 +37,14 @@ class HomePage extends StatelessWidget {
               );
             },
             child: Text("3D Stack Rotation"),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Get.to(
+                HeroAnimation(),
+              );
+            },
+            child: Text("Hero Animation"),
           )
         ],
       ),
